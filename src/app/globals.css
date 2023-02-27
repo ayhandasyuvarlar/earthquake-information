@@ -140,7 +140,7 @@ body {
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap);
 
 body {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
 }
 .lds-ripple {
   display: inline-block;
@@ -187,4 +187,42 @@ body {
     height: 72px;
     opacity: 0;
   }
+}
+
+.ant-table-content table {
+  font-size: 20px;
+  font-family: "Lexend Deca", sans-serif;
+}
+@media (max-width: 1200px) {
+  .ant-table-content {
+    width: 100% !important;
+  }
+  .ant-table {
+    max-width: 90% !important;
+    margin: 0 auto!important;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+}
+@media (max-width: 768px) {
+  .ant-table-content table {
+    font-size: 13px;
+    width: 100% !important;
+  }
+}
+@media (max-width: 500px) {
+  .ant-table-content table {
+    font-size: 10px;
+    width: 100% !important;
+  }
+}
+.ant-spin-container a{
+  color: #ffff !important;
+}
+.ant-pagination-item-ellipsis{
+  color: #ffff !important;
+  font-size: 12px;
+}
+.ant-pagination-item-active a{
+  color: #15202b !important;
 }
