@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { MdReorder ,MdOutlineClose } from "react-icons/md";
 import styles from "./navbar.module.scss";
 const Navbar = () => {
-  const getData = fetch("https://deprembilgi-plum.vercel.app/api/navbar").then((res) =>
+  const getData = fetch("http://localhost:3000/api/navbar").then((res) =>
     res.json()
   );
   const [isHidden, setIsHidden] = useState(false);

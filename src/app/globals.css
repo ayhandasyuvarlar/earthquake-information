@@ -199,7 +199,7 @@ body {
   }
   .ant-table {
     max-width: 90% !important;
-    margin: 0 auto!important;
+    margin: 0 auto !important;
     overflow: hidden;
     overflow-x: auto;
   }
@@ -216,13 +216,20 @@ body {
     width: 100% !important;
   }
 }
-.ant-spin-container a{
+.ant-spin-container a {
   color: #ffff !important;
 }
-.ant-pagination-item-ellipsis{
+.ant-pagination-item-ellipsis {
   color: #ffff !important;
   font-size: 12px;
 }
-.ant-pagination-item-active a{
+.ant-pagination-item-active a {
   color: #15202b !important;
+}
+.ant-card-meta-title {
+  color: #67cb33 !important;
+  width: 95%;
+}
+.ant-card-meta-description {
+  color: white!important;
 }
