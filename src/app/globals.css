@@ -122,14 +122,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
     background-color: #15202b;
   }
   body {
     color: #ffffff;
+    background-color: #15202b;
   }
+} */
+body {
+  color: #ffffff;
+  background-color: #15202b;
 }
 @import url(https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap);
