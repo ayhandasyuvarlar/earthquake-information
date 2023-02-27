@@ -1,0 +1,16 @@
+.footer {
+    width: 100%;
+    border-top: 0.3px solid #8899a9;
+    background-color: #192734;
+    padding: 40px 0px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    &__item {
+        width: 40%;
+        font-size: 20px;
+    }
+}
