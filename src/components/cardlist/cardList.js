@@ -14,6 +14,7 @@ const CardList = ({
   lng,
   mag,
   depth,
+  geojson ,
 }) => {
   const [isHidden, setIsHidden] = useState(false);
   return (
@@ -37,6 +38,7 @@ const CardList = ({
                 lng={lng}
                 mag={mag}
                 depth={depth}
+                geojson = {geojson}
               />
             }
             className={style.card__body}

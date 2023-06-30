@@ -1,5 +1,5 @@
 import { Button, Modal } from "antd";
-const Modals = ({ title, lat, date, lng, mag, depth }) => {
+const Modals = ({ title, lat, date, lng, mag, depth, geojson }) => {
   function info() {
     Modal.info({
       title: "Bu bilgi deprem yerine ait olan detaylı bilgilerdir",
@@ -10,10 +10,10 @@ const Modals = ({ title, lat, date, lng, mag, depth }) => {
             Tarih : <span>{date}</span>{" "}
           </p>
           <p>
-            Enlem : <span>{lat}</span>{" "}
+            Enlem : <span>{geojson.coordinates[0]}</span>{" "}
           </p>
           <p>
-            Boylam : <span>{lng}</span>{" "}
+            Boylam : <span>{geojson.coordinates[1]}</span>{" "}
           </p>
           <p>
             Derinlik : <span>{depth}</span>{" "}

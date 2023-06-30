@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./card.module.scss";
-const Table = ({ date, lat, lng, mag, depth }) => {
+const Table = ({lat, lng, mag, depth ,geojson}) => {
   return (
     <table className={style.table}>
       <thead>
@@ -13,8 +13,8 @@ const Table = ({ date, lat, lng, mag, depth }) => {
       </thead>
       <tbody>
         <tr>
-          <td>{lat}</td>
-          <td>{lng}</td>
+          <td>{geojson.coordinates[0]}</td>
+          <td>{geojson.coordinates[1]}</td>
           <td>{depth}</td>
           <td>{mag}</td>
         </tr>

@@ -39,7 +39,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <Card />
+        <Card data={data} />
         <h1 className={styles.title}>Tüm Olan Depremler</h1>
         <div className={styles.cardList}>
           {data.slice(0, 24).map((item) => (
