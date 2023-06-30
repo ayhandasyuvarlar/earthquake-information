@@ -27,9 +27,7 @@ const CardList = ({
       >
         <Skeleton loading={loading} avatar active>
           <Meta
-            avatar={
-              <Avatar src="https://cdn.abcotvs.com/dip/images/2731229_120317-wtvd-earthquake-generic-shutterstock-img.jpg" />
-            }
+            avatar={<Avatar shape="square">{mag} </Avatar>}
             title={title}
             description={
               <Modals
