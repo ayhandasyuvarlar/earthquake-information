@@ -6,7 +6,7 @@ import Image from "next/image";
 import Card from "@/components/card/card";
 import CardList from "@/components/cardlist/cardList";
 import { useEffect, useState } from "react";
-
+import style from "../components/card/card.module.scss";
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
@@ -39,19 +39,37 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <Card data={data} />
-        <h1 className={styles.title}>Tüm Olan Depremler</h1>
-        <div className={styles.cardList}>
-          {data.slice(0, 24).map((item) => (
-            <section
-              key={item.earthquake_id}
-              style={{ width: "30%" }}
-              className={styles.cardItem}
-            >
-              <CardList {...item} loading={loading} setLoading={setLoading} />
-            </section>
-          ))}
-        </div>
+        {loading && (
+          <>
+            <div className={style.loading}>
+              <div className="lds-ripple">
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </>
+        )}
+        {!loading && (
+          <>
+            <Card data={data} />
+            <h1 className={styles.title}>Tüm Olan Depremler</h1>
+            <div className={styles.cardList}>
+              {data.slice(0, 24).map((item) => (
+                <section
+                  key={item.earthquake_id}
+                  style={{ width: "30%" }}
+                  className={styles.cardItem}
+                >
+                  <CardList
+                    {...item}
+                    loading={loading}
+                    setLoading={setLoading}
+                  />
+                </section>
+              ))}
+            </div>
+          </>
+        )}
       </main>
     </>
   );
